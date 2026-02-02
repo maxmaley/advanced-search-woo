@@ -1,0 +1,25 @@
+.widget-content .afswWidgetRow.afswMapRow {
+	margin: 10px 0;
+}
+.widget-content .afswWidgetRowCell {
+	float: left;
+	margin-bottom: 10px;
+}
+.widget-content .afswWidgetRowCell .afswWidgetSuboptionsCell {
+	margin-top: 10px;
+}
+.widget-content .afswWidgetRowCell.afswFirstCell {
+	width: 40%;
+}
+.widget-content .afswWidgetRowCell.afswLastCell {
+	width: 60%;
+}
+.widget-content .afswWidgetRow input[type="text"], .widget-content .afswWidgetRow select {
+	width: 100%;
+}
+.widget-content .afswWidgetRow input[type="checkbox"] {
+	vertical-align: bottom;
+}
+.widget-content .woobewoo-info {
+	vertical-align: middle;
+}
