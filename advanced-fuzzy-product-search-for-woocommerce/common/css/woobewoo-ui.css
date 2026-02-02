@@ -182,17 +182,27 @@
 	color: var(--afsw-primary);
 }
 
-/* Go PRO tab special styling */
+/* Go PRO tab special styling - CTA button style */
+.woobewoo-navigation .woobewoo-tab-gopro {
+	margin: 16px 12px 4px;
+	background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%) !important;
+	box-shadow: 0 4px 12px -2px rgba(99, 102, 241, 0.4);
+}
+
 .woobewoo-navigation .woobewoo-tab-gopro a {
-	color: var(--afsw-success) !important;
+	color: var(--afsw-white) !important;
+	font-weight: 600;
+	justify-content: center;
 }
 
 .woobewoo-navigation .woobewoo-tab-gopro a i {
-	color: var(--afsw-success) !important;
+	color: var(--afsw-white) !important;
 }
 
 .woobewoo-navigation .woobewoo-tab-gopro:hover {
-	background-color: var(--afsw-success-light) !important;
+	background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%) !important;
+	transform: translateY(-1px);
+	box-shadow: 0 6px 16px -2px rgba(99, 102, 241, 0.5);
 }
 
 /* PRO Labels */
@@ -206,27 +216,38 @@
 
 .woobewoo-show-pro {
 	position: relative;
-	display: block;
+	display: inline-flex;
+	align-items: center;
 }
 
 .woobewoo-show-pro:after {
 	content: 'PRO';
-	position: absolute;
-	right: -8px;
-	top: -8px;
+	position: relative;
+	right: auto;
+	top: auto;
+	margin-left: 8px;
 	font-size: 9px;
 	font-weight: 700;
-	color: var(--afsw-primary);
-	background: var(--afsw-primary-light);
-	padding: 2px 6px;
+	color: var(--afsw-white);
+	background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+	padding: 3px 6px;
 	border-radius: 4px;
 	letter-spacing: 0.5px;
+	flex-shrink: 0;
 }
 
-.woobewoo-navigation .woobewoo-show-pro:after {
+/* PRO label in navigation - inline after text */
+.woobewoo-navigation ul li a .woobewoo-show-pro {
+	display: inline-flex;
+	align-items: center;
+}
+
+.woobewoo-navigation ul li a i.woobewoo-show-pro:after {
+	position: absolute;
 	right: 12px;
 	top: 50%;
 	transform: translateY(-50%);
+	margin-left: 0;
 }
 
 .woobewoo-pro-desc {
@@ -260,6 +281,11 @@
 	cursor: pointer;
 	transition: var(--afsw-transition);
 	box-shadow: var(--afsw-shadow-sm);
+	white-space: nowrap;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
 }
 
 .woobewoo-plugin .button:hover,
@@ -338,8 +364,9 @@
 }
 
 .woobewoo-plugin .button i {
-	margin-right: 8px;
+	margin-right: 0;
 	color: inherit;
+	flex-shrink: 0;
 }
 
 .woobewoo-plugin .button[disabled],
@@ -1271,4 +1298,215 @@ ul.woobewoo-bar-controls > li {
 	.woobewoo-plugin .woobewoo-content .woobewoo-container {
 		margin-left: 0 !important;
 	}
+}
+
+/* ============================================
+   SETTINGS PAGE STYLES
+   ============================================ */
+
+/* Grid System */
+.woobewoo-plugin .row {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0;
+}
+
+.woobewoo-plugin .col-1 { flex: 0 0 8.333%; max-width: 8.333%; }
+.woobewoo-plugin .col-2 { flex: 0 0 16.666%; max-width: 16.666%; }
+.woobewoo-plugin .col-3 { flex: 0 0 25%; max-width: 25%; }
+.woobewoo-plugin .col-4 { flex: 0 0 33.333%; max-width: 33.333%; }
+.woobewoo-plugin .col-5 { flex: 0 0 41.666%; max-width: 41.666%; }
+.woobewoo-plugin .col-6 { flex: 0 0 50%; max-width: 50%; }
+.woobewoo-plugin .col-7 { flex: 0 0 58.333%; max-width: 58.333%; }
+.woobewoo-plugin .col-8 { flex: 0 0 66.666%; max-width: 66.666%; }
+.woobewoo-plugin .col-9 { flex: 0 0 75%; max-width: 75%; }
+.woobewoo-plugin .col-10 { flex: 0 0 83.333%; max-width: 83.333%; }
+.woobewoo-plugin .col-11 { flex: 0 0 91.666%; max-width: 91.666%; }
+.woobewoo-plugin .col-12 { flex: 0 0 100%; max-width: 100%; }
+
+/* Settings Panel */
+.woobewoo-plugin .woobewoo-panel.options-values {
+	display: block;
+}
+
+/* Settings Sections */
+.woobewoo-plugin .afsw-group-label {
+	font-size: 18px;
+	font-weight: 600;
+	color: var(--afsw-gray-900);
+	margin: 0;
+	padding: 24px 0 16px;
+	border-bottom: 2px solid var(--afsw-gray-200);
+	margin-bottom: 20px;
+}
+
+.woobewoo-plugin .row-options-block:first-child .afsw-group-label {
+	padding-top: 0;
+}
+
+/* Settings Rows */
+.woobewoo-plugin .row-options-block {
+	display: flex;
+	align-items: flex-start;
+	gap: 20px;
+	padding: 16px 0;
+	border-bottom: 1px solid var(--afsw-gray-100);
+	margin: 0;
+}
+
+.woobewoo-plugin .row-options-block:last-child {
+	border-bottom: none;
+}
+
+/* Settings Labels */
+.woobewoo-plugin .sup-col-label {
+	min-width: 200px;
+	max-width: 200px;
+	font-weight: 500;
+	color: var(--afsw-gray-700);
+	padding-top: 8px;
+	flex-shrink: 0;
+}
+
+/* Settings Values */
+.woobewoo-plugin .sup-col-values {
+	flex: 1;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 16px;
+}
+
+/* Options Value Container */
+.woobewoo-plugin .options-value {
+	display: inline-flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.woobewoo-plugin .options-label {
+	font-size: 13px;
+	color: var(--afsw-gray-600);
+	font-weight: 500;
+}
+
+/* Title Bar for Settings */
+.woobewoo-plugin .woobewoo-titlebar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 20px 0;
+	margin-bottom: 0;
+	border-bottom: 1px solid var(--afsw-gray-200);
+	background: var(--afsw-white);
+}
+
+.woobewoo-plugin .woobewoo-titlebar .woobewoo-bar-controls {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+
+.woobewoo-plugin .woobewoo-title-icon {
+	font-size: 24px;
+	color: var(--afsw-primary);
+}
+
+.woobewoo-plugin .woobewoo-title-text {
+	font-size: 20px;
+	font-weight: 600;
+	color: var(--afsw-gray-900);
+}
+
+/* Main Buttons in Title Bar */
+.woobewoo-plugin .afsw-main-buttons {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.woobewoo-plugin .afsw-main-buttons .woobewoo-control-buttons {
+	margin: 0;
+	padding: 0;
+}
+
+/* Toggle in Settings */
+.woobewoo-plugin .options-value input.toggle + label.toggle {
+	margin: 0;
+}
+
+/* Tooltip in Settings */
+.woobewoo-plugin .sup-col-label.woobewoo-tooltip,
+.woobewoo-plugin .row-options-block .woobewoo-tooltip {
+	cursor: help;
+	border-bottom: 1px dashed var(--afsw-gray-400);
+}
+
+/* Settings Section Card Style */
+.woobewoo-plugin .woobewoo-panel {
+	background: var(--afsw-white);
+	border-radius: 0;
+	padding: 32px;
+}
+
+/* Remove extra margins in settings */
+.woobewoo-plugin #afswSettingsForm {
+	display: block;
+}
+
+.woobewoo-plugin #afswSettingsForm .woobewoo-panel {
+	padding: 0 32px 32px;
+}
+
+/* Responsive Settings */
+@media screen and (max-width: 768px) {
+	.woobewoo-plugin .row-options-block {
+		flex-direction: column;
+		gap: 12px;
+	}
+
+	.woobewoo-plugin .sup-col-label {
+		min-width: auto;
+		max-width: none;
+		padding-top: 0;
+	}
+
+	.woobewoo-plugin .sup-col-values {
+		width: 100%;
+	}
+
+	.woobewoo-plugin .woobewoo-titlebar {
+		flex-direction: column;
+		gap: 16px;
+		align-items: flex-start;
+	}
+
+	.woobewoo-plugin .afsw-main-buttons {
+		width: 100%;
+	}
+}
+
+/* ============================================
+   FIELDS LIST BUTTONS
+   ============================================ */
+
+/* DataTables Buttons Container */
+.woobewoo-plugin .dt-buttons {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	margin-bottom: 16px;
+}
+
+.woobewoo-plugin .dt-buttons .button {
+	height: 36px;
+	min-height: 36px;
+	line-height: 34px;
+	padding: 0 16px;
+	font-size: 13px;
+}
+
+/* Ensure PRO labels don't break buttons */
+.woobewoo-plugin .dt-buttons .button .woobewoo-show-pro:after {
+	position: relative;
+	margin-left: 6px;
 }
