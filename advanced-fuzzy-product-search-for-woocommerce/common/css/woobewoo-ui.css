@@ -50,6 +50,43 @@
 	line-height: 1.5;
 }
 
+/* WordPress Admin Notices - Fix positioning with sidebar */
+.woobewoo-wrap .notice,
+.woobewoo-wrap .updated,
+.woobewoo-wrap .error,
+.woobewoo-wrap .update-nag,
+.woobewoo-plugin .notice,
+.woobewoo-plugin .updated,
+.woobewoo-plugin .error {
+	margin: 16px 20px 16px 260px !important;
+	padding: 12px 16px;
+	border-radius: 8px;
+	border-left-width: 4px;
+	box-shadow: var(--afsw-shadow-sm);
+}
+
+.woobewoo-wrap .notice-success,
+.woobewoo-wrap .updated {
+	background: var(--afsw-success-light);
+	border-left-color: var(--afsw-success);
+}
+
+.woobewoo-wrap .notice-error,
+.woobewoo-wrap .error {
+	background: var(--afsw-danger-light);
+	border-left-color: var(--afsw-danger);
+}
+
+.woobewoo-wrap .notice-warning {
+	background: var(--afsw-warning-light);
+	border-left-color: var(--afsw-warning);
+}
+
+.woobewoo-wrap .notice-info {
+	background: var(--afsw-primary-light);
+	border-left-color: var(--afsw-primary);
+}
+
 .woobewoo-plugin * {
 	box-sizing: border-box;
 }
