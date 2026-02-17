@@ -1,0 +1,204 @@
+.afsw-hidden {
+	display: none;
+}
+.afsw-search-wrapper {
+	position: relative;
+	line-height: 100%;
+	display: block;
+	color: #444;
+	min-width: 100px;
+	width: 100%;
+	text-align: left;
+	margin: 0 auto;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	max-width: 400px;
+	width: 400px;
+	font-family: Roboto, Arial, sans-serif;
+}
+.afsw-field-wrapper {
+	zoom: 1;
+	width: 100%;
+	max-width: 100vw;
+	margin: 0;
+	position: relative;
+	background: 0 0;
+}
+.afsw-field-wrapper:after, .afsw-field-wrapper:before {
+	content: "";
+	display: table;
+}
+.afsw-field-wrapper input.afsw-search-input {
+	width: 100%;
+	height: 40px;
+	font-size: 16px;
+	line-height: 100%;
+	padding: 10px 15px;
+	margin: 0;
+	background: #fff;
+	border: 1px solid #7684ab;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-webkit-appearance: none;
+	box-sizing: border-box;
+	color: #3d3d3d;
+	padding-left: 80px;
+	padding-right: 30px;
+}
+.afsw-field-wrapper input.afsw-search-input::placeholder {
+	font-size: 16px;
+}
+.afsw-field-wrapper .afsw-search-remove {
+	overflow: hidden;
+	position: absolute;
+	padding: 0 7px;
+	margin: auto;
+	font-size: 16px;
+	cursor: pointer;
+	line-height: 40px;
+	right: 0;
+	left: auto;
+	top: 0;
+	bottom: 0;
+	color: #8e95a7;
+	border: none;
+	opacity: 0;
+}
+.afsw-field-wrapper .afsw-preloader {
+	overflow: hidden;
+	position: absolute;
+	padding: 0 7px;
+	margin: auto;
+	font-size: 16px;
+	line-height: 40px;
+	right: 90px;
+	left: auto;
+	top: 0;
+	bottom: 0;
+	color: #8e95a7;
+	border: none;
+	opacity: 0;
+}
+.afsw-field-wrapper .afsw-preloader i {
+	line-height: inherit;
+}
+.afsw-field-wrapper button.afsw-search-button {
+	overflow: visible;
+	position: absolute;
+	border: 0;
+	padding: 0 15px;
+	margin: 0;
+	cursor: pointer;
+	height: 40px;
+	min-width: 50px;
+	width: auto;
+	line-height: 100%;
+	min-height: 100%;
+	right: 0;
+	left: auto;
+	top: 0;
+	bottom: auto;
+	color: #fff;
+	-webkit-transition: 250ms ease-in-out;
+	-moz-transition: 250ms ease-in-out;
+	-ms-transition: 250ms ease-in-out;
+	-o-transition: 250ms ease-in-out;
+	transition: 250ms ease-in-out;
+	text-transform: uppercase;
+	background-color: #7684ab;
+	border-radius: 0 5px 5px 0;
+	-webkit-border-radius: 0 5px 5px 0;
+	text-shadow: 0 -1px 0 rgb(0 0 0 / 30%);
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	-webkit-appearance: none;
+	font-family: inherit;
+	font-size: 13px;
+	font-weight: normal;
+}
+.afsw-field-wrapper button.afsw-search-button:hover {
+	background-color: #70788f;
+}
+.afsw-field-wrapper button.afsw-search-button i {
+	font-size: 18px;
+}
+.afsw-search-wrapper input, .afsw-search-wrapper button {
+	outline: none;
+}
+.afsw-autocomplete-floating {
+	z-index: 999990;
+	position: absolute !important;
+	display: flex;
+}
+.afsw-autocomplete-popup {
+	font-family: Roboto, Arial, sans-serif;
+	font-size: 16px;
+	line-height: normal;
+	/*padding: 15px;*/
+	padding: 0;
+	margin: 0;
+	margin-top: 3px;
+	background: #fff;
+	border: 1px solid #7684ab;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-webkit-appearance: none;
+	box-sizing: border-box;
+	color: #3d3d3d;
+	overflow: auto;
+}
+.afsw-autocomplete-content {
+	font-family: inherit;
+	font-size: inherit;
+	margin: 15px;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	max-height: calc(100% - 30px);
+	max-width: calc(100% - 30px);
+}
+.afsw-autocomplete-popup .afsw-auto-list {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	width: 100%;
+}
+.afsw-autocomplete-popup .afsw-auto-list>li {
+	padding: 0;
+	margin: 0;
+}
+.afsw-autocomplete-popup .afsw-term-wrap {
+	width: 100%;
+	padding: 5px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+}
+.afsw-autocomplete-popup .afsw-section-term:hover, .afsw-autocomplete-popup .afsw-section-term.active {
+	background: #eceff1;
+}
+.afsw-autocomplete-popup .afsw-term-icon {
+	display: inline-block;
+	margin-right: 5px;
+}
+.afsw-autocomplete-popup .afsw-term-name {
+	display: inline-block;
+	white-space: normal;
+}
+.afsw-autocomplete-popup .afsw-section-title {
+	width: 100%;
+	padding: 5px;
+	text-transform: uppercase;
+	padding-top: 10px;
+}
+.afsw-autocomplete-popup li.afsw-section-group {
+	border-bottom: 1px solid #7684ab;
+}
+.afsw-section-term.afsw-term-separator {
+	border-bottom: 1px solid #eceff1;
+}
+.afsw-loader-wrapper {
+	margin: 0 auto;
+	width: 5px;
+}

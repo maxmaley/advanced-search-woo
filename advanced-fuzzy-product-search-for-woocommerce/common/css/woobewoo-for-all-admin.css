@@ -1,0 +1,6 @@
+.woobewoo-error {
+	color: #ff0000;
+}
+#toplevel_page_afsw-fields a[href*="woobewoo.com"] {
+    color: green;
+}
